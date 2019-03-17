@@ -16,8 +16,7 @@ describe("getAvailabilities", () => {
 
   describe("case 2", () => {
     beforeEach(async () => {
-      await knex("events").insert([
-        {
+      await knex("events").insert([{
           kind: "appointment",
           starts_at: new Date("2014-08-11 10:30"),
           ends_at: new Date("2014-08-11 11:30")
@@ -47,7 +46,7 @@ describe("getAvailabilities", () => {
         "9:30",
         "10:00",
         "11:30",
-        "21:00"
+        "14:00"
       ]);
 
       expect(String(availabilities[6].date)).toBe(
@@ -58,8 +57,7 @@ describe("getAvailabilities", () => {
 
   describe("case 3", () => {
     beforeEach(async () => {
-      await knex("events").insert([
-        {
+      await knex("events").insert([{
           kind: "appointment",
           starts_at: new Date("2014-08-11 10:30"),
           ends_at: new Date("2014-08-11 11:30")
