@@ -41,6 +41,35 @@ app.get("/api/wholeTeams", (req, res) => {
     res.send(wholeTeams);
 });
 
+// Validation using JOI
+function validatePersons(person) {
+    const schema = {
+        reason: Joi.string()
+            .min(20)
+            .required()
+    };
+    return Joi.validate(person, schema);
+}
+
+
+function validateGroups(group) {
+    const schema = {
+        reason: Joi.string()
+            .min(20)
+            .required()
+    };
+    return Joi.validate(group, schema);
+}
+
+
+function validateWholeTeams(wholeTeam) {
+    const schema = {
+        reason: Joi.string()
+            .min(20)
+            .required()
+    };
+    return Joi.validate(wholeTeam, schema);
+}
 
 // Defining the webserver port to be used for this endpoint
 const port = process.env.PORT || 7000;
