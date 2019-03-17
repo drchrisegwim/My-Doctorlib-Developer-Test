@@ -1,8 +1,9 @@
 {
   "name": "candidate-test",
   "private": true,
-  "version": "0.0.0",
-  "description": "developer test.",
+  "version": "1.0.0",
+  "description": "Christian Egwim Doctor lib developer test.",
+  "main": "doctorlibAPI.js",
   "scripts": {
     "db:migrate": "knex migrate:latest",
     "db:rollback": "knex migrate:rollback",
